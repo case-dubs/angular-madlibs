@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>ngMad Libs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<head>
+    <meta charset="UTF-8">
+    <title>ngMad Libs</title>
+    <style>
+      body{
+        font-family: 'Montserrat', sans-serif;
+      }
+      header{
+        padding: 10px; 
+        border-bottom: 1px solid black;
+      }
+      #happyFace {
+        position: absolute;
+        height: 80px;
+        left: 20px;
+      }
+      #mainHeader{
+        margin: 0 auto;
+      }
+      #mainHeader img {
+        display: block;
+        margin: 0 auto;
+        height: 80px;
+      }
+      #provideWords, #madLibsStory {
+        max-width: 1000px;
+        margin: 35px auto;
+      }
+      .inputRow{
+        width: 33%;
+        display: inline-block;
+      }
+      .inputRow input {
+        display: block;
+        margin: 20px auto;
+        height: 25px;
+        width: 150px;
+        padding: 10px;
+        border-radius: 3px;
+      }
+      #madLibsStory p {
+        line-height: 2.3;
+      }
+    </style>
+</head>
+<body ng-app="">
+    <header>
+      <img id="happyFace" src="/assets/images/mad-lib-happy-face.png">
+      <div id='mainHeader'>
+        <img src="/assets/images/ng-mad-libs-logo.png">
+      </div>  
+    </header>
+    <div id="provideWords">
+      <h1>Provide the Following Words</h1>
+      <div class="inputRow">
+        <input type="text" placeholder="Female name" ng-model="data.female_name">
+        <input type="text" placeholder="Job title" ng-model="data.job_title">
+        <input type="text" placeholder="Tedious Task" ng-model="data.tedious_task">
+      </div>
+      <div class="inputRow">
+        <input type="text" placeholder="Dirty Task" ng-model="data.dirty_task">
+        <input type="text" placeholder="Celebrity" ng-model="data.celebrity">
+        <input type="text" placeholder="Useless Skill" ng-model="data.useless_skill">
+      </div>
+      <div class="inputRow">
+        <input type="text" placeholder="Obnoxious Celebrity" ng-model="data.obnoxious_celebrity">
+        <input type="text" placeholder="Huge Number" ng-model="data.huge_number">
+        <input type="text" placeholder="Adjective" ng-model="data.adjective">
+      </div>
+
+    </div>
+    <div id='madLibsStory'>
+      <p>{{data.female_name.length > 0 ? data.female_name : '___________'}} was a {{data.job_title.length > 0 ? data.job_title : '___________'}} who loved technology. Although she loved parts of her job, she absolutely hated  {{data.tedious_task.length > 0 ? data.tedious_task : '___________'}} and {{data.dirty_task.length > 0 ? data.dirty_task : '___________'}}. So, {{data.female_name.length > 0 ? data.female_name : '___________'}} met with her life mentor {{data.celebrity.length > 0 ? data.celebrity : '___________'}} who told her to learn how to {{data.useless_skill.length > 0 ? data.useless_skill : '___________'}} with Thinkful. Thinkful didn't offer a course on {{data.useless_skill.length > 0 ? data.useless_skill : '___________'}} so she studied programming instead.</p> 
+      <br>
+      <p>What a great decision! With her new skills, {{data.female_name.length > 0 ? data.female_name : '___________'}} built a(n) {{data.adjective.length > 0 ? data.adjective : '___________'}} robot named {{data.obnoxious_celebrity.length > 0 ? data.obnoxious_celebrity : '___________'}} that not only loved {{data.dirty_task}} but did it {{data.huge_number.length > 0 ? data.huge_number : '___________'}} faster. </p>
+    </div>
+</body>
+<script>
+
+</script>
+</html>
